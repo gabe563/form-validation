@@ -1,7 +1,7 @@
 window.onload = () => {
   const form = document.querySelector('.main-form');
   setTimeout(() => {
-    // form.parentElement.classList.add('active');
+    form.parentElement.classList.add('active');
   }, 500);
 };
 
@@ -208,10 +208,29 @@ function showSuccessModal() {
 
   const loadingModal = document.querySelector('.loading');
 
+  function addAnimation(modal) {
+    const lottie = document.createElement('lottie-player');
+    lottie.setAttribute(
+      'src',
+      'https://assets8.lottiefiles.com/datafiles/8UjWgBkqvEF5jNoFcXV4sdJ6PXpS6DwF7cK4tzpi/Check Mark Success/Check Mark Success Data.json'
+    );
+    lottie.setAttribute('background', 'transparent');
+    lottie.setAttribute('speed', '1');
+    lottie.setAttribute('style', 'width: 150px; height: 150px');
+    lottie.setAttribute('autoplay', 'autoplay');
+
+    modal.querySelector('.animation').appendChild(lottie);
+  }
+
   setTimeout(() => {
     loadingModal.classList.add('active');
     setTimeout(() => {
       loadingModal.classList.toggle('active');
+      setTimeout(() => {
+        const successModal = document.querySelector('.successForm');
+        successModal.classList.add('active');
+        addAnimation(successModal);
+      }, 500);
     }, Math.floor(Math.random() * 7000));
   }, 600);
 }
