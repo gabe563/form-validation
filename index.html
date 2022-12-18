@@ -7,9 +7,10 @@
     <title>Ready to Sign-up?</title>
     <script type="text/javascript" src="app.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
-    <div class="main active">
+    <div class="main center">
       <div class="header">
         <img src="./assets/icon.svg" alt="icon" />
         <h1>Ready to join?</h1>
@@ -17,7 +18,8 @@
       <form class="main-form">
         <div class="email">
           <label for="email">Email</label
-          ><input type="email" id="email" placeholder="example@gmail.com" />
+          ><input type="text" id="email" placeholder="example@gmail.com" />
+          <span></span>
         </div>
         <div class="password">
           <label for="password">Password</label
@@ -26,6 +28,7 @@
             id="password"
             placeholder="must be 8 characters"
           />
+          <span></span>
         </div>
         <div class="country">
           <label for="country">Country</label
@@ -326,22 +329,34 @@
             <option value="Zambia">Zambia</option>
             <option value="Zimbabwe">Zimbabwe</option>
           </select>
+          <span></span>
         </div>
         <div class="confirm-password">
           <label for="confirm">Confirm Password</label
           ><input type="password" id="confirm" placeholder="same as above" />
+          <span></span>
         </div>
         <div class="zip-code">
           <label for="zip-code">Zip-code</label
-          ><input
-            id="zip-code"
-            type="text"
-            pattern="[0-9]*"
-            placeholder="Zip Code"
-          />
+          ><input id="zip-code" type="text" placeholder="Zip Code" />
+          <span></span>
         </div>
         <button type="submit" class="submit">Yessir</button>
       </form>
     </div>
+    <div class="loading center">
+      <div class="content">
+        <lottie-player
+          src="https://assets5.lottiefiles.com/packages/lf20_pwszksuv.json"
+          background="transparent"
+          speed="1.5"
+          style="width: 150px; height: 150px"
+          loop
+          autoplay
+        ></lottie-player>
+        <p>Checking all the fields</p>
+      </div>
+    </div>
+    <div class="successForm center active"></div>
   </body>
 </html>
