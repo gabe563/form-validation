@@ -230,7 +230,7 @@ function showSuccessModal() {
         const successModal = document.querySelector('.successForm');
         successModal.classList.add('active');
         addAnimation(successModal);
-      }, 300);
+      }, 500);
     }, Math.floor(Math.random() * 7000));
   }, 600);
 }
