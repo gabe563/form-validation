@@ -226,9 +226,11 @@ function showSuccessModal() {
     loadingModal.classList.add('active');
     setTimeout(() => {
       loadingModal.classList.toggle('active');
-      const successModal = document.querySelector('.successForm');
-      successModal.classList.add('active');
-      addAnimation(successModal);
+      setTimeout(() => {
+        const successModal = document.querySelector('.successForm');
+        successModal.classList.add('active');
+        addAnimation(successModal);
+      }, 300);
     }, Math.floor(Math.random() * 7000));
   }, 600);
 }
